@@ -1,0 +1,31 @@
+---
+title: "peptide.tools"
+layout: post
+date: 2018-06-16 22:35
+tag: webdev
+image: 
+headerImage: false
+projects: true
+hidden: true # don't count this post in blog pagination
+description: "Tools for people working with peptides."
+category: project
+author: mkam039
+externalLink: false
+---
+
+![Screenshot](/assets/images/peptide_tools_screenshot.png)
+
+A web application for peptide scientists. Allows users to calculate the analytical properties of the peptides and generated data on the necessary synthetic protocols. Users can save and easily retrieve information on the different peptides and peptide building blocks.
+
+---
+
+Inside:
+
+- Node.js
+- MongoDB
+- Pug
+- JQuery
+
+---
+
+[Check it out](https://peptide.tools)
