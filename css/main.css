@@ -1,15 +1,23 @@
 body {
     font-family: monospace;
+    line-height: 1.7em;
+    font-size: 1.3em;
 }
 
 .content {
-    line-height: 1.7em;
-    font-size: 1.2 em;
     height:auto;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 5%;
     width: 90%;
     max-width:900px;
+}
 
+.section {
+    padding:5px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
 }
