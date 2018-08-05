@@ -9,15 +9,16 @@ body {
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 5%;
-    width: 90%;
+    width:90%;
     max-width:900px;
 }
 
 .section {
-    padding:5px;
+    padding:20px;
 }
 
 .flex {
     display: flex;
     flex-wrap: wrap;
 }
+
