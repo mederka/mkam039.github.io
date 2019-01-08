@@ -22,3 +22,6 @@ body {
     flex-wrap: wrap;
 }
 
+a {
+    color: black;
+}
