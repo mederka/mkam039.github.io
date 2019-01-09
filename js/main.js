@@ -10,7 +10,7 @@ function readOrg(org){
   return output;
 }
 
-fetch('https://kamalov.net/files/info.org')
+fetch('http://kamalov.net/files/info.org')
   .then(response => response.text())
   .then(response => {
     let org = response;
