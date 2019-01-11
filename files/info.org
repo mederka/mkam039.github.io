@@ -1,5 +1,7 @@
-
-* Test Title One
-This is some sample text.
-* Test Title Two
-This is more sample text.
+: This is the raw data that is accessed when the different sections of the webpage are called :
+* _developer
+developer related text
+* _chemist
+chemist related text
+* _lengthiness
+blog
