@@ -4,6 +4,13 @@ body {
     font-size: 1.1em;
 }
 
+.nav {
+    margin:0 auto;
+    width:50px;
+    font-size:small;
+    display:none;
+}
+
 .content {
     height:auto;
     margin: 0 auto;
