@@ -22,6 +22,8 @@ function addUnderscoreListeners(org){
   }
 }
 
+document.body.style.cursor = 'default';
+
 fetch('files/info.org')
   .then(response => response.text())
   .then(response => {
