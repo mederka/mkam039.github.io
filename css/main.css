@@ -4,11 +4,19 @@ body {
     font-size: 1.1em;
 }
 
-.nav {
+a {
+    text-decoration:none;
+    color: black;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+#nav {
     margin:0 auto;
     width:50px;
     font-size:small;
-    display:none;
 }
 
 .content {
@@ -29,11 +37,6 @@ body {
     flex-wrap: wrap;
 }
 
-a {
-    text-decoration:none;
-    color: black;
-}
-
-a:hover {
-    text-decoration:underline;
+#title {
+    font-size:1.2em;
 }
