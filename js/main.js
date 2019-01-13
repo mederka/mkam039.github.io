@@ -10,7 +10,14 @@ function readOrg(org, level=1){
 }
 
 function underscoreClick(id, org){
-  return () => console.log(org[id]);
+  return () => {
+    let nav = document.getElementById('nav');
+    nav.innerHTML = '<a href="index.html">home</a>';
+    let title = document.getElementById('title');
+    title.innerText = id;
+    let entry = document.getElementById('entry');
+    entry.innerText = org[id]
+  }
 }
 
 function addUnderscoreListeners(org){
