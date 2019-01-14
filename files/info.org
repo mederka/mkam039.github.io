@@ -1,9 +1,16 @@
 : This is the raw data that is accessed when the different sections of the webpage are called :
 * _developer
-developer related text
+** Software development
+Software development related text.
 * _about
-general intro
+** About me
+This is where I am going to write a little bit about myself.
 * _chemist
-chemist related text
+** Chemistry
+Chemistry related text.
 * _lengthiness
-blog
+** test blog post 1
+text of the first blog post
+** test blog post 2
+text of the second blog post
+
