@@ -1,10 +1,13 @@
 function readOrg(org, level=1){
-  let orgArray = org.split('\n' + '*'.repeat(level) + ' ');
+  let orgArray = org.split('\n' + '*'.repeat(level) + ' ');  
   let output = {};
   for (let i = 1; i < orgArray.length; i++){
     let item = orgArray[i].split('\n');
     const id = item.shift();
-    output[id] = item.join('\n');
+    item = '\n' + item.join('\n');
+    const splitter = '\n' + '*'.repeat(level+1) + ' ';
+    if (!item.indexOf(splitter) || org.indexOf(splitter) == -1) output[id] = readOrg(item, level + 1);
+    else output[id] = item;
   }
   return output;
 }
