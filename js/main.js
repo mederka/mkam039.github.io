@@ -6,8 +6,8 @@ function readOrg(org, level=1){
     const id = item.shift();
     item = '\n' + item.join('\n');
     const splitter = '\n' + '*'.repeat(level+1) + ' ';
-    if (!item.indexOf(splitter) || org.indexOf(splitter) == -1) output[id] = readOrg(item, level + 1);
-    else output[id] = item;
+    if (org.indexOf(splitter) == -1) output[id] = item;
+    else output[id] = readOrg(item, level + 1);
   }
   return output;
 }
