@@ -4,16 +4,16 @@ function readOrg(org, level=1){
   for (let i = 1; i < orgArray.length; i++){
     let item = orgArray[i].split('\n');
     const id = item.shift();
-    item = '\n' + item.join('\n');
+    const joinedItem = '\n' + item.join('\n');
     const splitter = '\n' + '*'.repeat(level+1) + ' ';
-    if (org.indexOf(splitter) == -1) output[id] = item;
-    else output[id] = readOrg(item, level + 1);
+    if (org.indexOf(splitter) == -1) output[id] = item.join('\n');
+    else output[id] = readOrg(joinedItem, level + 1);
   }
   return output;
 }
 
 function underscoreClick(id, org){
-  if (id == '_lengthiness') return console.log(org[id]);
+  if (id == '_lengthiness') return () => console.log(org[id]);
   return () => {
     let nav = document.getElementById('nav');
     nav.innerHTML = '<a href="index.html">home</a>';
