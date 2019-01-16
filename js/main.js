@@ -31,6 +31,17 @@ function addUnderscoreListeners(org){
   }
 }
 
+function directLink(url, org) {
+  let urlArray = url.split('?');
+  if (urlArray.length && urlArray.length > 1) {
+    let id = urlArray[1];
+    let title = document.getElementById('title');
+    title.innerText = org[id].title;
+    let entry = document.getElementById('entry');
+    entry.innerText = org[id].content;
+  }
+}
+
 document.body.style.cursor = 'default';
 
 fetch('files/info.org')
@@ -38,5 +49,6 @@ fetch('files/info.org')
   .then(response => {
     let org = response;
     org = readOrg(org);
+    directLink(this.document.URL, org);
     addUnderscoreListeners(org);
   });
