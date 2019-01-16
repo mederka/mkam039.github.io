@@ -15,8 +15,6 @@ function readOrg(org, level=1){
 function underscoreClick(id, org){
   if (id == '_lengthiness') return () => console.log(org[id]);
   return () => {
-    let nav = document.getElementById('nav');
-    nav.innerHTML = '<a href="index.html">home</a>';
     let title = document.getElementById('title');
     title.innerText = org[id].title;
     let entry = document.getElementById('entry');
