@@ -12,34 +12,36 @@ function readOrg(org, level=1){
   return output;
 }
 
-function underscoreClick(id, org){
+function makeLink(id) {
   if (id == '_lengthiness') return () => console.log(org[id]);
   return () => {
-    let title = document.getElementById('title');
-    title.innerText = org[id].title;
-    let entry = document.getElementById('entry');
-    entry.innerText = org[id].content;
-  }
-}
-
-function addUnderscoreListeners(org){
-  var all = document.getElementsByTagName('*');
-  for (let i = 0; i < all.length; i++){
-    if (all[i].id && all[i].id[0] == '_'){
-      all[i].addEventListener('click', underscoreClick(all[i].id, org));
+    if (!directLink()) window.location = this.document.URL + '?' + id;
+    else {
+      let title = document.getElementById('title');
+      title.innerText = this.org[id].title;
+      let entry = document.getElementById('entry');
+      entry.innerText = this.org[id].content;
     }
   }
 }
 
-function directLink(url, org) {
+function addUnderscoreListeners() {
+  var all = document.getElementsByTagName('*');
+  for (let i = 0; i < all.length; i++){
+    if (all[i].id && all[i].id[0] == '_'){
+      all[i].addEventListener('click', makeLink(all[i].id));
+    }
+  }
+}
+
+function directLink() {
+  let url = this.document.URL;
   let urlArray = url.split('?');
   if (urlArray.length && urlArray.length > 1) {
     let id = urlArray[1];
-    let title = document.getElementById('title');
-    title.innerText = org[id].title;
-    let entry = document.getElementById('entry');
-    entry.innerText = org[id].content;
+    if (this.org[id]) return makeLink(id);
   }
+  return false;
 }
 
 document.body.style.cursor = 'default';
@@ -48,7 +50,7 @@ fetch('files/info.org')
   .then(response => response.text())
   .then(response => {
     let org = response;
-    org = readOrg(org);
-    directLink(this.document.URL, org);
-    addUnderscoreListeners(org);
+    this.org = readOrg(org);
+    if (directLink()) directLink()();
+    addUnderscoreListeners();
   });
