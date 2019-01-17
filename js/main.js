@@ -1,4 +1,4 @@
-function readOrg(org, level=1){
+function readOrg(org, level=1) {
   let orgArray = org.split('\n' + '*'.repeat(level) + ' ');  
   let output = {};
   for (let i = 1; i < orgArray.length; i++){
@@ -15,20 +15,20 @@ function readOrg(org, level=1){
 function makeLink(id) {
   if (id == '_lengthiness') return () => console.log(org[id]);
   return () => {
-    if (!directLink()) window.location = this.document.URL + '?' + id;
-    else {
-      let title = document.getElementById('title');
-      title.innerText = this.org[id].title;
-      let entry = document.getElementById('entry');
-      entry.innerText = this.org[id].content;
-    }
+    let title = document.getElementById('title');
+    title.innerText = this.org[id].title;
+    let entry = document.getElementById('entry');
+    entry.innerText = this.org[id].content;
   }
 }
 
-function addUnderscoreListeners() {
+function addInternalLinks() {
   var all = document.getElementsByTagName('*');
   for (let i = 0; i < all.length; i++){
     if (all[i].id && all[i].id[0] == '_'){
+      setTimeout(() => all[i].classList.add('internal-link'), 3000);
+      
+      console.log(all[i]);
       all[i].addEventListener('click', makeLink(all[i].id));
     }
   }
@@ -52,5 +52,5 @@ fetch('files/info.org')
     let org = response;
     this.org = readOrg(org);
     if (directLink()) directLink()();
-    addUnderscoreListeners();
+    else addInternalLinks();
   });

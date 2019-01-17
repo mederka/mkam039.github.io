@@ -42,8 +42,8 @@ a:hover {
 }
 
 .internal-link {
-    animation: makelink 1.0s forwards;
-    -webkit-animation: makelink 1.0s forwards;
+    animation: makelink 1.5s forwards;
+    -webkit-animation: makelink 1.5s forwards;
 }
 
 @keyframes makelink {
