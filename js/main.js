@@ -13,7 +13,6 @@ function readOrg(org, level=1) {
 }
 
 function makeLink(id) {
-  if (id == '_lengthiness') return () => console.log(org[id]);
   return () => {
     let title = document.getElementById('title');
     title.innerText = this.org[id].title;
@@ -27,9 +26,9 @@ function addInternalLinks() {
   for (let i = 0; i < all.length; i++){
     if (all[i].id && all[i].id[0] == '_'){
       all[i].addEventListener('click', makeLink(all[i].id));
-      setTimeout(() => all[i].classList.add('animate-button'), 3000);
-      setTimeout(() => all[i].classList.add('animate-background'), 4000);
-      setTimeout(() => all[i].classList.add('change-background'), 7000);
+      setTimeout(() => all[i].classList.add('animate-button'), 1000);
+      setTimeout(() => all[i].classList.add('animate-background'), 1500);
+      setTimeout(() => all[i].classList.add('change-background'), 2500);
     }
   }
 }

@@ -55,7 +55,7 @@ a:hover {
 }
 
 .animate-background {
-    animation: animateBackground 2s forwards;
+    animation: animateBackground 0.5s forwards;
 }
 
 @keyframes animateBackground {
@@ -77,7 +77,7 @@ a:hover {
 }
 
 .change-background {
-    animation: changeColorLoop 3s alternate infinite;
+    animation: changeColorLoop 2s alternate infinite;
 }
 
 @keyframes changeColorLoop {
