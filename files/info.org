@@ -1,4 +1,14 @@
 : This is the raw data that is accessed when the different sections of the webpage are called :
+* _index
+** title
+meder kamalov
+** content
+Software developer at eguana.
+
+A part-time chemist at the University of Vienna.
+
+I believe that brevity is almost always better than lengthiness.
+
 * _developer
 ** title
 Software developer
@@ -15,15 +25,19 @@ Chemistry
 ** content
 Chemistry related text
 * _lengthiness
-** posts
-*** post1
-**** title
+** title
+My blog
+** content
+This is where my blog is going to live
+* _posts
+** post1
+*** title
 Title of the first blog post
-**** content
+*** content
 Content of the first blog post
-*** post2
-**** title
+** post2
+*** title
 Title of the second blog post
-**** content
+*** content
 Content of the second blog post
 
