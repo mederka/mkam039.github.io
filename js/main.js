@@ -26,10 +26,10 @@ function addInternalLinks() {
   var all = document.getElementsByTagName('*');
   for (let i = 0; i < all.length; i++){
     if (all[i].id && all[i].id[0] == '_'){
-      setTimeout(() => all[i].classList.add('internal-link'), 3000);
-      
-      console.log(all[i]);
       all[i].addEventListener('click', makeLink(all[i].id));
+      setTimeout(() => all[i].classList.add('animate-button'), 3000);
+      setTimeout(() => all[i].classList.add('animate-background'), 4000);
+      setTimeout(() => all[i].classList.add('change-background'), 7000);
     }
   }
 }

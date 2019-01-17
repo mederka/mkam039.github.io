@@ -41,20 +41,61 @@ a:hover {
     flex-wrap: wrap;
 }
 
-.internal-link {
-    animation: makelink 1.5s forwards;
-    -webkit-animation: makelink 1.5s forwards;
+.animate-button {
+    animation: makeButton 1s forwards;
 }
 
-@keyframes makelink {
-    
+@keyframes makeButton {
     to {
-        border: solid 1px;
+        border: solid 0.5px lightgray;
         padding: 10px;
         border-radius: 5px;
-        box-shadow: 3px 3px 0 0 #ccc;
+        box-shadow: 3px 3px 1px 0 #ccc;
+    }
+}
+
+.animate-background {
+    animation: animateBackground 2s forwards;
+}
+
+@keyframes animateBackground {
+    from {
+        border: solid 0.5px lightgray;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 1px 0 #ccc;
+        background-color: white;
     }
     
+    to {
+        border: solid 0.5px lightgray;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 1px 0 #ccc;
+        background-color: #D5FFDB;
+    }
+}
+
+.change-background {
+    animation: changeColorLoop 3s alternate infinite;
+}
+
+@keyframes changeColorLoop {
+    from {
+        border: solid 0.5px lightgray;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 1px 0 #ccc;
+        background-color: #D5FFDB;
+    }
+
+    to {
+        border: solid 0.5px lightgray;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 1px 0 #ccc;
+        background-color: #E2D9FF;
+    }
 }
 
 #title {
