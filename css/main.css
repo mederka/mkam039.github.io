@@ -17,10 +17,22 @@ a:hover {
     text-decoration:underline;
 }
 
-#nav {
+.nav {
     margin:0 auto;
-    width:50px;
     font-size:small;
+    max-width: 900px;
+    padding-left: 20px;
+    height:30px;
+}
+
+.nav-button {
+    border: solid 0.5px lightgray;
+    padding: 3px;
+    margin-right: 15px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 1px 0 #ccc;
+    background-color: #D5FFDB;
+
 }
 
 .content {
