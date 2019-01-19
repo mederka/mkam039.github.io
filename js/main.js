@@ -12,8 +12,9 @@ function readOrg(org, level=1) {
   return output;
 }
 
-function makeLink(id) {
+function makeLink(id, nav=false) {
   return () => {
+    if (!nav) makeNav();
     let title = document.getElementById('title');
     title.innerText = this.org[id].title;
     let entry = document.getElementById('entry');
@@ -21,8 +22,16 @@ function makeLink(id) {
   }
 }
 
+function makeNav() {
+  let buttons = document.getElementsByClassName('nav-button');
+  for (let i = 0; i < buttons.length; i++){
+    buttons[i].style.display = 'inline';
+    buttons[i].addEventListener('click', makeLink(buttons[i].id, true));
+  }
+}
+
 function addInternalLinks() {
-  var all = document.getElementsByTagName('*');
+  var all = document.getElementsByTagName('span');
   for (let i = 0; i < all.length; i++){
     if (all[i].id && all[i].id[0] == '_'){
       all[i].addEventListener('click', makeLink(all[i].id));
