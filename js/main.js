@@ -12,9 +12,17 @@ function readOrg(org, level=1) {
   return output;
 }
 
+function pressNavButton(id) {
+  let pressedButtons = document.getElementsByClassName('nav-button-pressed');
+  for (pressedButton of pressedButtons) pressedButton.classList.replace('nav-button-pressed','nav-button');
+  let button = document.getElementById(id);
+  button.classList.replace('nav-button','nav-button-pressed');
+}
+
 function makeLink(id, nav=false) {
   return () => {
     if (!nav) makeNav();
+    pressNavButton(id);
     let title = document.getElementById('title');
     title.innerText = this.org[id].title;
     let entry = document.getElementById('entry');

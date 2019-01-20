@@ -36,6 +36,17 @@ a:hover {
     display: none;
 }
 
+.nav-button-pressed {
+    border: solid 0.5px lightgray;
+    padding: 3px;
+    margin-right: 12px;
+    margin-left: 3px;
+    margin-top: 3px;
+    margin-bottom: -3px;
+    border-radius: 5px;
+    background-color: #E2D9FF;
+}
+
 .content {
     height:auto;
     margin: 0 auto;
