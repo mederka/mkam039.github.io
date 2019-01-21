@@ -4,10 +4,6 @@ body {
     font-size: 1.1em;
 }
 
-p {
-    margin: 2em 0;
-}
-
 a {
     text-decoration:none;
     color: black;
@@ -55,63 +51,6 @@ a {
 .flex {
     display: flex;
     flex-wrap: wrap;
-}
-
-.animate-button {
-    animation: makeButton 1s forwards;
-}
-
-@keyframes makeButton {
-    to {
-        border: solid 0.5px lightgray;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 3px 3px 1px 0 #ccc;
-    }
-}
-
-.animate-background {
-    animation: animateBackground 0.5s forwards;
-}
-
-@keyframes animateBackground {
-    from {
-        border: solid 0.5px lightgray;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 3px 3px 1px 0 #ccc;
-        background-color: white;
-    }
-    
-    to {
-        border: solid 0.5px lightgray;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 3px 3px 1px 0 #ccc;
-        background-color: #D5FFDB;
-    }
-}
-
-.change-background {
-    animation: changeColorLoop 2s alternate infinite;
-}
-
-@keyframes changeColorLoop {
-    from {
-        border: solid 0.5px lightgray;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 3px 3px 1px 0 #ccc;
-        background-color: #D5FFDB;
-    }
-
-    to {
-        border: solid 0.5px lightgray;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 3px 3px 1px 0 #ccc;
-        background-color: #E2D9FF;
-    }
 }
 
 #title {
