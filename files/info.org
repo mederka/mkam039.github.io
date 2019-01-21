@@ -3,9 +3,9 @@
 ** title
 meder kamalov
 ** content
-Software developer at eguana.
+Developer at eguana.
 
-A part-time chemist at the University of Vienna.
+Part-time chemist at the University of Vienna.
 
 I believe that brevity is almost always better than lengthiness.
 

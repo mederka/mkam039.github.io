@@ -65,5 +65,8 @@ fetch('files/info.org')
     let org = response;
     this.org = readOrg(org);
     if (directLink()) directLink()();
-    else addInternalLinks();
+    else {
+      makeNav();
+      pressNavButton('_index');
+    }
   });
