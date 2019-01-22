@@ -12,6 +12,18 @@ function readOrg(org, level=1) {
   return output;
 }
 
+function parseLink(text) {
+  let textArray = text.split('[[');
+  if (textArray.length > 1) {
+    for (let i = 1; i < textArray.length; i++){
+      let chunks = textArray[i].split('][');
+      let otherChunk = chunks[1].split(']]');
+      textArray[i] = '<a href="?' + chunks[0] + '">' + otherChunk[0] + '</a> ' + otherChunk[1];
+    }
+  }
+  return textArray.join('');
+}
+
 function pressNavButton(id) {
   let pressedButtons = document.getElementsByClassName('nav-button-pressed');
   for (pressedButton of pressedButtons) pressedButton.classList.replace('nav-button-pressed','nav-button');
@@ -26,7 +38,7 @@ function makeLink(id, nav=false) {
     let title = document.getElementById('title');
     title.innerText = this.org[id].title;
     let entry = document.getElementById('entry');
-    entry.innerText = this.org[id].content;
+    entry.innerHTML = parseLink(this.org[id].content);
   }
 }
 
