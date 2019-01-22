@@ -9,26 +9,27 @@ Part-time chemist at the University of Vienna.
 
 I believe that brevity is almost always better than lengthiness.
 
-* _developer
-** title
-Software developer
-** content
-Software development related text.
 * _about
 ** title
 About me
 ** content
 This is where I am going to write a little bit about myself.
-* _chemist
+
+* _dev
+** title
+Software developer
+** content
+Software development related text.
+* _chem
 ** title
 Chemistry
 ** content
 Chemistry related text
-* _lengthiness
+* _texts
 ** title
-My blog
+Some texts
 ** content
-This is where my blog is going to live
+This is where texts that seemed worth writing will be published.
 * _posts
 ** post1
 *** title
