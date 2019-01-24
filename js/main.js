@@ -12,16 +12,20 @@ function readOrg(org, level=1) {
   return output;
 }
 
-function parseLink(text) {
-  let textArray = text.split('[[');
-  if (textArray.length > 1) {
-    for (let i = 1; i < textArray.length; i++){
-      let chunks = textArray[i].split('][');
-      let otherChunk = chunks[1].split(']]');
-      textArray[i] = '<a href="?' + chunks[0] + '">' + otherChunk[0] + '</a> ' + otherChunk[1];
+function renderOrg(org) {
+  function parseLink(text) {
+    let textArray = text.split('[[');
+    if (textArray.length > 1) {
+      for (let i = 1; i < textArray.length; i++){
+        let chunks = textArray[i].split('][');
+        let otherChunk = chunks[1].split(']]');
+        textArray[i] = '<a href="?' + chunks[0] + '">' + otherChunk[0] + '</a> ' + otherChunk[1];
+      }
     }
+    return textArray.join('');
   }
-  return textArray.join('');
+  const out = parseLink(org);
+  return out.replace(/\n/gi, '<br>');
 }
 
 function pressNavButton(id) {
@@ -38,7 +42,7 @@ function makeLink(id, nav=false) {
     let title = document.getElementById('title');
     title.innerText = this.org[id].title;
     let entry = document.getElementById('entry');
-    entry.innerHTML = parseLink(this.org[id].content);
+    entry.innerHTML = renderOrg(this.org[id].content);
   }
 }
 
