@@ -25,6 +25,45 @@ Software development related text.
 Chemistry
 ** content
 Chemistry related text
+** teaching
+*** folding
+**** lectures
+**** 1. Introduction
+***** why study protein structure?
+- chemistry of life
+- chemistry of degeneration
+- fundamental scientific problem
+***** what do we study when we study protein structure?
+- proteins
+- peptides
+- tissues
+- 
+***** how do we study protein structure?
+- literature review
+- protein synthesis/isolation
+- x-ray crystallography
+- nmr
+- cryo-em
+**** 2. Anfinsen experiments
+**** 3. Review of protein structure: Helicity
+- Extracellular proteins
+- Helicity
+**** 4. Review of protein structure: beta sheets
+**** 5. Review of protein structure: folding motifs
+**** 6. Protein folding in vitro
+- Buffer conditions and aggregation
+- Large scale protein folding
+**** 7. Chaperones
+- Ribosome tunnel, trigger factor, HSPs
+- ER Chaperones
+- Protein degradation
+**** 8. Collagen
+- Triple helix
+- Post-translational modifications
+- Collagen-based diseases
+**** 9. Prions and Amyloids
+**** 10. Protein deposition and neurodegenerative disease
+**** 11. Student presentations (depends on participation)
 * _texts
 ** title
 Some texts
