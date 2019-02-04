@@ -67,6 +67,9 @@
     }
     
     else branch = t2.data[id];
+
+    if (branch.type && branch.type.text == 'slideshow') return makeSlideshow(branch);
+    
     return () => {
       let title = document.getElementById('title');
       title.innerText = branch.title.text;
@@ -74,6 +77,50 @@
       content.innerHTML = renderText(branch.content.text);
     }
   };
+
+  function makeSlideshow(branch) {
+    let slidenumber = 1;
+    
+    function renderSlide() {
+      console.log(slidenumber);
+      if (branch[slidenumber]){
+        document.getElementById('title').innerHTML='';
+        document.getElementById('content').innerHTML='';
+        let title = document.getElementById('slide-title');
+        title.innerText = branch[slidenumber].title.text;
+        let content = document.getElementById('slide-content');
+        content.innerHTML = renderText(branch[slidenumber].content.text);
+      }
+    };
+    
+    renderSlide();
+
+    function goNext() {
+      if (branch[slidenumber+1]) {
+        slidenumber++;
+      }
+      return renderSlide();
+    };
+
+    function goLast() {
+      if (branch[slidenumber-1]) {
+        slidenumber--;
+      }
+      return renderSlide();
+    };
+    
+    let nextSlide = document.getElementById('next-slide');
+    nextSlide.addEventListener('click', goNext);
+
+    let lastSlide = document.getElementById('last-slide');
+    lastSlide.addEventListener('click', goLast);
+
+    window.onkeyup = function(key) {
+      if (key.key == 'ArrowRight') goNext();
+      if (key.key == 'ArrowLeft') goLast();
+    }
+    
+  }
   
   function addInternalLinks() {
     let all = document.getElementsByClassName('text-link');

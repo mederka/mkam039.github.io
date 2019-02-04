@@ -27,23 +27,51 @@ Chemistry
 Chemistry related text
 ** teaching
 *** folding
-**** lectures
-**** 1. Introduction
-***** why study protein structure?
+**** intro
+***** Notes
+****** why study protein structure?
 - chemistry of life
 - chemistry of degeneration
 - fundamental scientific problem
-***** what do we study when we study protein structure?
+****** what do we study when we study protein structure?
 - proteins
 - peptides
 - tissues
 - 
-***** how do we study protein structure?
+****** how do we study protein structure?
 - literature review
 - protein synthesis/isolation
 - x-ray crystallography
 - nmr
 - cryo-em
+***** slides
+****** 1
+******* title
+what is folding
+******* content
+folding is difficult but interesting
+****** 2
+******* title
+what?
+******* content
+yeah
+****** 3
+******* title
+slide 3 title
+******* content
+slide 3 content
+****** 4
+******* title
+slide 4 title
+******* content
+slide 4 content
+****** 5
+******* title
+slide 5 title
+******* content
+slide 5 content
+****** type
+slideshow
 **** 2. Anfinsen experiments
 **** 3. Review of protein structure: Helicity
 - Extracellular proteins
@@ -64,6 +92,10 @@ Chemistry related text
 **** 9. Prions and Amyloids
 **** 10. Protein deposition and neurodegenerative disease
 **** 11. Student presentations (depends on participation)
+**** title
+folding course
+**** content
+info on folding course
 * _texts
 ** title
 Some texts
