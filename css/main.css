@@ -5,17 +5,17 @@ body {
 }
 
 a {
-    text-decoration:underline;
+    text-decoration: underline;
     color: black;
 }
 
 .nav {
-    margin:0 auto;
+    margin: 0 auto;
     font-size:small;
     text-align: center;
     max-width: 900px;
     padding-left: 20px;
-    height:30px;
+    height: 30px;
 }
 
 .nav-button {
@@ -36,12 +36,12 @@ a {
 }
 
 #page {
-    height:auto;
+    height: auto;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 5%;
-    width:90%;
-    max-width:900px;
+    width: 90%;
+    max-width: 900px;
 }
 
 .section {
@@ -54,5 +54,28 @@ a {
 }
 
 #title {
-    font-size:1.2em;
+    font-size: 1.2em;
+}
+
+#slide {
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 99%;
+    display: none;
+    position: absolute;
+    text-align: center;
+}
+
+#slide-title {
+    padding: 1.5em;
+    font-size: 2.5em;
+    margin: 0 auto;
+}
+
+#slide-content {
+    width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.3em;
 }

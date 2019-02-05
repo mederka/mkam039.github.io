@@ -85,6 +85,8 @@
       if (branch[slidenumber]){
         document.getElementById('title').innerHTML='';
         document.getElementById('content').innerHTML='';
+        let slide = document.getElementById('slide');
+        slide.style.display = 'block';
         let title = document.getElementById('slide-title');
         title.innerText = branch[slidenumber].title.text;
         let content = document.getElementById('slide-content');
