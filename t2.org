@@ -72,26 +72,53 @@ slide 5 title
 slide 5 content
 ****** type
 slideshow
-**** 2. Anfinsen experiments
-**** 3. Review of protein structure: Helicity
+**** anfinsen
+***** title
+Anfinsen Experiments
+***** content
+**** helicity
+***** title
+Review of protein structure: helicity
+***** content
 - Extracellular proteins
 - Helicity
-**** 4. Review of protein structure: beta sheets
-**** 5. Review of protein structure: folding motifs
-**** 6. Protein folding in vitro
+**** beta-sheets
+***** title
+Review of protein structure: beta-sheets
+***** content
+text about beta sheets
+**** motifs
+***** title
+Review of protein structure: folding motifs
+***** content
+**** in-vitro
+***** title
+Protein folding in vitro
+***** content
 - Buffer conditions and aggregation
 - Large scale protein folding
-**** 7. Chaperones
+**** chaperones
+***** title
+Chaperones
+***** content
 - Ribosome tunnel, trigger factor, HSPs
 - ER Chaperones
 - Protein degradation
-**** 8. Collagen
+**** collagen
+***** title
+Collagen
+***** content
 - Triple helix
 - Post-translational modifications
 - Collagen-based diseases
-**** 9. Prions and Amyloids
-**** 10. Protein deposition and neurodegenerative disease
-**** 11. Student presentations (depends on participation)
+**** prions-amyloids
+***** title
+Prions and Amyloids
+***** content
+**** neurodegenerative
+***** title
+Protein deposition and neurodegenerative disease
+***** content
 **** title
 folding course
 **** content
