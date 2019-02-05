@@ -82,7 +82,6 @@
     let slidenumber = 1;
     
     function renderSlide() {
-      console.log(slidenumber);
       if (branch[slidenumber]){
         document.getElementById('title').innerHTML='';
         document.getElementById('content').innerHTML='';
